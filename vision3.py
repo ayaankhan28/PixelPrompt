@@ -8,12 +8,12 @@ from customtkinter import *
 import Capturer
 def take_screenshot():
     screenshot = ImageGrab.grab()
-    screenshot.save('C:\\Mydrive\\python.vs\\Gemini\\Vision\\screenshot.png')
+    screenshot.save('screenshot.png')
 def analyze_image(image, query):
     description = gemini3.analyze(image, query)
     return description
 def play_here():
-    notification_sound_path = "C:\\Mydrive\\python.vs\\Gemini\\Vision\\noti.mp3"
+    notification_sound_path = "noti.mp3"
     auddata, samra = sf.read(notification_sound_path)
     sd.play(auddata, samra)
     sd.wait()
@@ -43,7 +43,7 @@ while True:
         Capturer.capture_screen()
         get_input()
         print("Latest Description:", description)
-        text = analyze_image('C:\\Mydrive\\python.vs\\Gemini\\Vision\\screenshot.png', description)
+        text = analyze_image('screenshot.png', description)
         pyperclip.copy(text)
         play_here()
 

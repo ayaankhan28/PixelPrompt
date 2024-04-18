@@ -96,11 +96,13 @@ To run this project, you will need to have the Google's Gemini API Key.
 
 ## Installation
 
-Install my-project with npm
+Installing required packages
 
 ```bash
-  npm install my-project
-  cd my-project
+  pip install google
+  pip install pyperclip
+  pip install sounddevice soundfile
+  pip install customtkinter
 ```
     
 ## Screenshots
